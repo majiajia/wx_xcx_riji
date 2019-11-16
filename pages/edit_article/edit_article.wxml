@@ -1,0 +1,20 @@
+<view>
+    <form bindsubmit="formSubmit" report-submit="true" bindsubmit="save_item">
+        <input name="id" type="text" value="{{id}}" style="display:none;"/>
+        <view style="display:flex;flex-direction:row;justify-content:center;align-items:center;font-weight:bold;width:100%;margin-top:20rpx;margin-bottom:20rpx;">
+            <input name="title" type="text" value="{{title}}" placeholder="{{title}}" style="width:70%;font-size:42rpx;border:1rpx solid WhiteSmoke;padding:8rpx;"/>
+        </view>
+        
+        <view style="display:flex;flex-direction:row;justify-content:space-around;align-items:center;width:100%;padding-top:4rpx;padding-bottom:4rpx;">
+            <text style="font-size:32rpx;color:grey;">创建:{{create_at}}</text>
+            <text style="font-size:32rpx;color:grey;">更新:{{update_at}}</text>
+        </view>
+        <view style="text-indent:60rpx;padding-left:8rpx;padding-right:8rpx;text-align:justify;text-indent:60rpx;text-align:justify;display:flex;flex-direction:row;justify-content:center;align-items:center;width:100%;margin-top:20rpx;margin-bottom:20rpx;width:100%;">
+            <textarea name="content" value="{{content}}" maxlength="-1" style="width:90%;height:900rpx; font-size:36rpx;border:1rpx solid WhiteSmoke;"></textarea>
+        </view>
+        
+        <view style="width:100%;display:flex;flex-direction:row;justify-content:center;align-items:center;">
+            <button class="btn" type="primary" form-type='submit'>保存</button>
+        </view>
+    </form>
+</view>

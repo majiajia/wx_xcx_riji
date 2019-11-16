@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "xcx_anyuan_helper_new_0528",
+            "dialect": "MySQL",
+            "name": "xcx_db",
+            "password": "zhong1104",
+            "port": 3306,
+            "server": "xcx.hnfabang.cn",
+            "username": "zhongmeng"
+        }
+    ]
+}

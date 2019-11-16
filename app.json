@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/article_list/article_list",
+        "pages/article_item/article_item",
+        "pages/add_article/add_article",
+        "pages/edit_article/edit_article"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "爱记日记",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json"
+}

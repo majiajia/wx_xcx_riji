@@ -1,0 +1,33 @@
+<!-- 显示搜索输入框和文章列表 -->
+<view style="width:100%;">
+    <!-- 搜索框 -->
+    <!-- <view style="display:flex;flex-direction:row;width:100%;padding-left:10%;padding-right:10%;"> -->
+        <!-- <input type="text" bindinput="handle_input_search_word" placeholder="请输入搜索词" style="width:70%;"/>     -->
+        <!-- <icon type="search" style="margin-right:28rpx;" bindtap="handle_search"/> -->
+        <!-- <icon type="clear" bindtap="clear_search_words"/>  -->
+    <!-- </view> -->
+    
+    <block wx:if="{{article_list_is_empty}}">
+        <view style="display:flex;flex-direction:row;justify-content:center;align-items:center;padding-top:40rpx;padding-bottom:40rpx;">
+            <text style="color:grey;">开始记录第一篇文章吧!</text>
+        </view>
+    </block>
+    <block>
+        <block wx:for="{{article_list}}" wx:for-item="article_item">
+            <view style="display:flex;flex-direction:column;justify-content:center;align-items:center;width:98%;margin-left:1%;margin-right:1%;border-bottom:1rpx solid LightGrey;padding-bottom:16rpx;margin-top:16rpx;margin-bottom:16rpx;" data-id="{{article_item.id}}" bindtap="see_item">
+                <text style="font-weight:bold;font-size:48rpx;padding-top:8rpx;padding-bottom:8rpx;">{{article_item.title}}</text>    
+                <view style="display:flex;flex-direction:row;justify-content:space-around;align-items:center;width:100%;padding-top:4rpx;padding-bottom:4rpx;">
+                    <text style="color:grey;font-size:32rpx;">创建:{{article_item.create_at}}</text>
+                    <text style="color:grey;font-size:32rpx;">更新:{{article_item.update_at}}</text>
+                </view>
+                <view style="text-indent:60rpx;padding-left:8rpx;padding-right:8rpx;text-align:justify;padding-top:8rpx;padding-bottom:8rpx;line-height:44rpx;">
+                    <text>{{article_item.brief}}</text>
+                </view>
+            </view>
+        </block>
+    </block>
+    
+    <view style="position:fixed;bottom:20px;right:20px;">
+        <image src="../../imgs/add_btn.png" bindtap="nav_to_add_article" style="width:100rpx;height:100rpx;"/>
+    </view>
+</view>

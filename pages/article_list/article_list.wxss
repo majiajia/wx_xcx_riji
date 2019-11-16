@@ -1,0 +1,4 @@
+/* pages/article_list/article_list.wxss */
+Page {
+    font-size:40rpx;
+}

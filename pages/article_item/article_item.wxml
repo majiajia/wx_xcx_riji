@@ -1,0 +1,21 @@
+<view>
+    <view style="display:flex;flex-direction:row;justify-content:center;align-items:center;font-weight:bold;">
+        <text style="font-size:48rpx;">{{title}}</text>
+    </view>
+    
+    <view style="display:flex;flex-direction:row;justify-content:space-around;align-items:center;width:100%;padding-top:4rpx;padding-bottom:4rpx;">
+        <text style="color:grey;font-size:32rpx;">创建:{{create_at}}</text>
+        <text style="color:grey;font-size:32rpx;">更新:{{update_at}}</text>
+    </view>
+    <view style="text-indent:60rpx;padding-left:8rpx;padding-right:8rpx;text-align:justify;text-indent:60rpx;text-align:justify;display:flex;flex-direction:row;justify-content:center;align-items:center;width:100%;margin-top:20rpx;margin-bottom:20rpx;width:100%;">
+        <textarea name="content" value="{{content}}" disabled="{{true}}" maxlength="-1" style="width:96%;height:900rpx;font-size:36rpx;"></textarea>
+    </view>
+    
+    <view style="display:flex;flex-direction:row;justify-content:center;align-items:center;margin-top:100rpx;">
+        <text style="padding:10rpx;color:white;background-color:red;border-radius:12rpx;border:1rpx solid red;" data-id="{{id}}" bindtap="delete_item">删除</text>
+    </view>
+    
+    <view style="position:fixed;bottom:20px;right:20px;">
+        <image src="../../imgs/edit_btn.png" bindtap="edit_item" data-id="{{id}}" style="width:80rpx;height:80rpx;"/>
+    </view>
+</view>

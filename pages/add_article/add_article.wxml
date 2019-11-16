@@ -1,0 +1,15 @@
+<view>
+    <form bindsubmit="formSubmit" report-submit="true" bindsubmit="save_item">
+        <view style="display:flex;flex-direction:row;justify-content:center;align-items:center;font-weight:bold;width:100%;margin-top:20rpx;margin-bottom:20rpx;">
+            <input name="title" type="text" value="{{title}}" placeholder="请输入文章标题" style="width:70%;font-size:42rpx;border:1rpx solid WhiteSmoke;padding:8rpx;"/>
+        </view>
+        
+        <view style="text-indent:60rpx;text-align:justify;display:flex;flex-direction:row;justify-content:center;align-items:center;font-weight:bold;width:100%;margin-top:20rpx;margin-bottom:20rpx;width:100%;">
+            <textarea name="content" value="{{content}}" placeholder="请输入文章内容" maxlength="-1" style="width:90%;height:900rpx; font-size:36rpx;border:1rpx solid WhiteSmoke;"></textarea>
+        </view>
+        
+        <view style="width:100%;display:flex;flex-direction:row;justify-content:center;align-items:center;">
+            <button class="btn" type="primary" form-type='submit'>保存</button>
+        </view>
+    </form>
+</view>
